@@ -141,7 +141,6 @@ const CommentAndLike = async function(session, accountId, text){
 		]
 		const [Follow,Comment,Like] = await Promise.all(task);
 		const printFollow = Follow ? chalk`{green Follow}` : chalk`{red Follow}`;
-		/* const printComment = Comment ? chalk`{green Comment}` : chalk`{red Comment}`; */
 		const printLike = Like ? chalk`{green Like}` : chalk`{red Like}`;
 		return chalk`{bold.green ${printFollow},${printLike} [${text}]}`;
 	}
